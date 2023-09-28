@@ -1,0 +1,134 @@
+<html>
+
+    <head>
+        <title>
+            SPACE INVADERS
+        </title>
+        <style>
+            .ship {
+                fill: grey;
+            }
+
+            .invader {
+                fill: yellow;
+            }
+
+            .booster {
+                fill: orange;
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+
+            .playerBullet {
+                fill: white;
+            }
+
+            .alienBullet {
+                fill: red;
+            }
+
+            .rock {
+                fill: burlywood;
+            }
+
+            .gameover {
+                font-family: sans-serif;
+                font-size: 80px;
+                fill: red;
+            }
+
+            .victory {
+                font-family: sans-serif;
+                font-size: 80px;
+                fill: green;
+            }
+
+            .key {
+                width: 18px;
+                text-align: center;
+                border-radius: 3px;
+                background-color: lightgray;
+            }
+
+            .highlight {
+                background-color: pink;
+            }
+
+            div#controls {
+                float: right;
+                margin: 50px;
+            }
+
+            div#intro {
+                float: right;
+                margin: 20px;
+            }
+            .stats {
+                fill:white;
+                font-family: sans-serif;
+            }
+
+            .shield {
+                fill: green;
+            }
+
+            .superShip {
+                fill: red;
+            }
+
+            .shieldDestruction {
+                fill: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script src="dist\spaceinvaders.js"></script>
+        <svg id="svgCanvas" width="600" height="600" style="background-color:black">
+            <text x="10" y="20" id="scoreDisplay" class="stats">Score: </text>
+            <text x="500" y="20" id="levelDisplay" class="stats">Level: /</text>
+            <text x="200" y="20" id="superShipDisplay" class="stats">Super Ship: </text>
+            <text x="400" y="20" id="comboDisplay" class="stats">Combo: /</text>
+            <g id="ship" class="ship" transform="translate(100,100)">
+                <polygon points="-15,20 15,20 0,-20">
+                </polygon>
+            </g>
+        </svg>
+        <div id='intro'>
+            <h1>
+                SPACE INVADERS
+            </h1>
+            <h4>
+                Mingxuan Fu
+            </h4>
+            <button onClick="window.location.reload();" style="opacity: 0;" id="gameRestartBtn" disabled>Restart
+                Game</button>
+        </div>
+        <div id="controls">
+            <h2>Controls:</h2>
+            <table>
+                <tr>
+                    <td>Move Left</td>
+                    <td>
+                        <div id="ArrowLeft" class="key">A</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Move Right</td>
+                    <td>
+                        <div id="ArrowRight" class="key">B</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fire</td>
+                    <td>
+                        <div id="Space" class="key" style="width:50px">Space</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>
